@@ -645,3 +645,65 @@ No new Data to insert today.
 ETL process complete!
 ETL completed successfully at Thu Oct  9 23:53:25 MDT 2025
 
+========================================================================
+ETL Run: Thu Oct 30 00:04:26 MDT 2025
+Traceback (most recent call last):
+  File "/home/shakeebsyed33/exchange_rate_etl/main.py", line 1, in <module>
+    from extract.fetch_data import fetch_exchange_data
+  File "/home/shakeebsyed33/exchange_rate_etl/extract/fetch_data.py", line 2, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+ETL failed at Thu Oct 30 00:04:26 MDT 2025
+
+========================================================================
+ETL Run: Thu Oct 30 00:07:24 MDT 2025
+/home/shakeebsyed33/exchange_rate_etl/load/load_to_db.py:24: FutureWarning: The behavior of 'isin' with dtype=datetime64[ns] and castable values (e.g. strings) is deprecated. In a future version, these will not be considered matching by isin. Explicitly cast to the appropriate dtype before calling isin instead.
+  new_rows = df[~df['d'].isin(existing_dates)]
+Fetching data...
+Retrieved 2202 rows and 5 columns.
+Cleaning data...
+Loading data to SQLite...
+Saving DB to: /home/shakeebsyed33/exchange_rate_etl/exchange_rates.db
+Added 13 new rows.
+ETL process complete!
+ETL completed successfully at Thu Oct 30 00:07:26 MDT 2025
+
+========================================================================
+ETL Run: Thu Oct 30 00:16:44 MDT 2025
+Fetching data...
+Retrieved 2202 rows and 5 columns.
+Cleaning data...
+Loading data to SQLite...
+Saving DB to: /home/shakeebsyed33/exchange_rate_etl/exchange_rates.db
+Traceback (most recent call last):
+  File "/home/shakeebsyed33/exchange_rate_etl/main.py", line 13, in <module>
+    load_to_sqlite(df)
+  File "/home/shakeebsyed33/exchange_rate_etl/load/load_to_db.py", line 11, in load_to_sqlite
+    conn.execute(f"""
+sqlite3.OperationalError: incomplete input
+ETL failed at Thu Oct 30 00:16:46 MDT 2025
+
+========================================================================
+ETL Run: Thu Oct 30 00:18:24 MDT 2025
+/home/shakeebsyed33/exchange_rate_etl/load/load_to_db.py:25: FutureWarning: The behavior of 'isin' with dtype=datetime64[ns] and castable values (e.g. strings) is deprecated. In a future version, these will not be considered matching by isin. Explicitly cast to the appropriate dtype before calling isin instead.
+  new_rows = df[~df['d'].isin(existing_dates)]
+Fetching data...
+Retrieved 2202 rows and 5 columns.
+Cleaning data...
+Loading data to SQLite...
+Saving DB to: /home/shakeebsyed33/exchange_rate_etl/exchange_rates.db
+Added 5 new rows.
+ETL process complete!
+ETL completed successfully at Thu Oct 30 00:18:26 MDT 2025
+
+========================================================================
+ETL Run: Thu Oct 30 00:19:57 MDT 2025
+Fetching data...
+Retrieved 2202 rows and 5 columns.
+Cleaning data...
+Loading data to SQLite...
+Saving DB to: /home/shakeebsyed33/exchange_rate_etl/exchange_rates.db
+Added 2202 new rows.
+ETL process complete!
+ETL completed successfully at Thu Oct 30 00:19:59 MDT 2025
+

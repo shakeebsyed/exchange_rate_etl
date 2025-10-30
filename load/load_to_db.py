@@ -14,7 +14,8 @@ def load_to_sqlite(df, db_path="exchange_rates.db"):
             FXINRCAD REAL,
             FXUSDCAD REAL,
             FXSARCAD REAL,
-            FXAUDCAD REAL
+            FXAUDCAD REAL,
+            created_at TEXT DEFAULT (DATE('now'))
         )
     """)
 

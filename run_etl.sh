@@ -2,7 +2,7 @@
 
 #Currency Exchange rate ETL automation Script
 
-PROJECT_DIR="/home/$USER/Projects/exchange-rate-etl"
+PROJECT_DIR="/home/$USER/exchange_rate_etl"
 VENV_DIR="$PROJECT_DIR/venv"
 LOG_FILE="$PROJECT_DIR/log.txt"
 
